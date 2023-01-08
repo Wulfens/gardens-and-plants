@@ -28,11 +28,10 @@ Plant.create!(
   garden: other
 )
 
+Tag.destroy_all if Rails.env.development?
 
-# Tag.destroy_all if Rails.env.development?
+names = %w(Fruit tree Cactus Greasy plant Flower Ferns Conifers)
 
-# names = %w(Fruit\ tree Cactus Greasy\ plant Flower Ferns Conifers)
-
-# names.each do |name|
-#   Tag.create!(name: name)
-# end
+names.each do |name|
+  Tag.create!(name: name)
+end

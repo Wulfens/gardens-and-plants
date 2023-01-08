@@ -1,4 +1,5 @@
 class PlantTagsController < ApplicationController
+
   def new
     @plant_tag = PlantTag.new
     @plant = Plant.find(params[:plant_id])
